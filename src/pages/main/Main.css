@@ -1,0 +1,72 @@
+.main-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.header {
+    background-color: #242424;
+    color: white;
+    height: 3rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .links {
+    display: flex;
+    gap: 1rem;
+    margin-left: 1rem;
+}
+
+.header .links .link {
+    color: #aab;
+    text-decoration: none;
+    padding: 0.1rem 0.5rem;
+}
+
+.header .links .link:hover {
+    color: white;
+}
+
+.header .links .link.active {
+    font-weight: bold;
+    color: white;
+    border-bottom: 2px solid white;
+    padding: 0.1rem 0.5rem;
+}
+
+.header .user-info {
+    display: flex;
+    gap: 1rem;
+    margin-right: 1rem;
+    font-weight: bold;
+}
+
+.header .user-info .login-date {
+    font-size: small;
+    font-weight: 100;
+}
+
+.header .logout-button {
+    font-weight: 400;
+    height: fit-content;
+    font-size: medium;
+    border: none;
+    outline: none;
+    color: white;
+    cursor: pointer;
+    background-color: #aab;
+    color: black;
+    padding: 0.1rem 0.5rem;
+    border-radius: 5px;
+}
+
+.header .logout-button:hover {
+    background-color: white;
+}
+
+.main-content {
+    height: 100%;
+}

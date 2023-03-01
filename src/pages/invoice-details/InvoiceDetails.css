@@ -1,0 +1,59 @@
+.invoice-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.invoice-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    width: 30rem;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px #aaaaaa50;
+}
+
+.details-field {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.details-field.comment {
+    flex-direction: column;
+    padding-bottom: 1rem;
+}
+
+.details-field.price {
+    border-top: 1px solid black;
+    padding-top: 1rem;
+    justify-content: flex-end;
+    font-size: large;
+    font-weight: bold;
+}
+
+.details-field .detail-name {
+    font-weight: bold;
+}
+
+.buttons {
+    margin-top: 1rem;
+}
+
+.back-button {
+    text-decoration: none;
+    margin: 1rem 0rem;
+    width: 100%;
+    outline: none;
+    border: none;
+    padding: 0.5rem 0.4rem;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}

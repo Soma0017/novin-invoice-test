@@ -1,0 +1,78 @@
+.invoice-container {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.invoice-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.invoice-form .title {
+    margin-bottom: 1rem;
+}
+
+
+.invoice-form .form-field {
+    display: flex;
+    flex-direction: column;
+    margin: 0.4rem 0rem;
+}
+
+.form-field .field-label {
+    font-size: small;
+}
+
+.form-field .field-error {
+    font-size: small;
+    color: red;
+}
+
+
+.field-label.required::after {
+    margin-left: 0.1rem;
+    content: "*";
+    color: red;
+}
+
+.invoice-form input,
+textarea {
+    width: 30rem;
+    background-color: white;
+    outline: none;
+    border: none;
+    margin: 0.2rem 0rem;
+    padding: 0.5rem 0.4rem;
+
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px #aaaaaa50;
+}
+
+.invoice-form .buttons {
+    width: 100%;
+    display: flex;
+    margin-top: 1rem;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.invoice-form .buttons .button {
+    text-align: center;
+    text-decoration: none;
+    margin: 1rem 0rem;
+    width: fit-content;
+    outline: none;
+    border: none;
+    padding: 0.5rem 0.4rem;
+    border-radius: 5px;
+    font-size: medium;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}

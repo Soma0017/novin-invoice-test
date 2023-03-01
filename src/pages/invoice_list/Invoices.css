@@ -1,0 +1,82 @@
+.invoice-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.invoice-content .control-row {
+    display: flex;
+    justify-content: flex-end;
+    width: 90%;
+    gap: 2rem;
+    padding: 1rem 0rem;
+}
+
+.invoice-content .control-row .button {
+    outline: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 14px;
+    gap: 0.4rem;
+    background-color: black;
+    color: white;
+    padding: 0.3rem 0.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.invoice-content .invoice-table {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: fit-content;
+    margin-bottom: 1rem;
+}
+
+
+.invoice-content .header-row {
+    display: flex;
+    flex-direction: row;
+    padding: 0.5rem 1rem;
+    font-size: small;
+}
+
+.invoice-table .table-rows {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.invoice-table .table-row {
+    display: flex;
+    flex-direction: row;
+    background-color: #fff;
+    box-shadow: 1px 1px 2px #aab;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: all 0.4s;
+    margin: 0.1rem 0rem;
+}
+
+.invoice-table .table-row:hover {
+    background-color: #eeeef4;
+    cursor: pointer;
+    transition: all 0.4s;
+}
+
+.invoice-table .header-cell {
+    flex: 1;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.invoice-table .table-cell {
+    flex: 1;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}

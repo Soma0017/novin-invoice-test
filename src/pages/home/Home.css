@@ -1,0 +1,31 @@
+.home-container {
+    display: flex;
+    flex: 1;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    padding: 4rem;
+}
+
+.home-container .title {
+    font-size: 5rem;
+    font-weight: bold;
+}
+
+.home-container .description {
+    width: 60vh;
+}
+
+.home-container .links {
+    margin-top: 1rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.home-container .links .link {
+    padding: 0.4rem 0.8rem;
+    border-radius: 5px;
+    background-color: #242424;
+    color: white;
+    text-decoration: none;
+}
