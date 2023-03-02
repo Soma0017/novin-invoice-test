@@ -8,7 +8,6 @@ export default function Login() {
     const { signIn, currentUser }: any = useAuth()
     const [loginAttempts, setLoginAttempts] = useState(0);
     const [captchaValue, setCaptchaValue] = useState(null);
-    //const captchaRef: any = createRef();
 
     const [loginData, setLoginData] = useState({
         username: '',
@@ -27,14 +26,17 @@ export default function Login() {
     function handleLogIn(event: any) {
         event.preventDefault();
         setLoginAttempts(loginAttempts + 1)
-        /*if (captchaRef.current != null) {
-            setCaptchaValue(captchaRef.current.getValue())
-        }*/
         if (loginData.username.length === 0 || loginData.password.length === 0) {
             setLoginErrors({
                 ...loginErrors,
                 username: (loginData.username.length === 0 ? "Mező kitöltése kötelező" : ""),
                 password: (loginData.password.length === 0 ? "Mező kitöltése kötelező" : "")
+            })
+            return;
+        } else if (loginData.password.length < 6) {
+            setLoginErrors({
+                ...loginErrors,
+                password: (loginData.password.length < 6 ? "A Jelszónak legalább 6 karakterből kell állnia." : "")
             })
             return;
         }
@@ -80,7 +82,6 @@ export default function Login() {
                 {
                     (loginAttempts >= 3) ? (
                         <ReCAPTCHA
-                            /*ref={captchaRef}*/
                             sitekey="6LeGX64kAAAAAGn7eVUkZW7TQAIN-IWdZ6xpIh9k"
                             onChange={captchaChange}
                         />

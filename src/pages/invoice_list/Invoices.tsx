@@ -29,6 +29,15 @@ export default function Invoices() {
         return (<Loading />)
     }
 
+    if (invoices.length === 0) {
+        return (
+            <div className="invoice-content">
+                Nincsenek számlák.
+                <NavLink to={"/create-invoice"} className='button'><i className="fa-solid fa-plus"></i><a>Új számla hozzáadása</a></NavLink>
+            </div>
+        )
+    }
+
     return (
         <div className='invoice-content'>
 

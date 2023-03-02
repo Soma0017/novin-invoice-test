@@ -24,10 +24,14 @@ export default function SignUp() {
         let fieldsValid = true;
         let errors: any = {}
         for (let key in signUpData) {
-            if (signUpData[key].length == 0) {
+            if (signUpData[key].length === 0) {
                 errors[key] = "Mező kitöltése kötelező"
                 fieldsValid = false;
             }
+        }
+        if (signUpData.password.length < 6) {
+            errors.password = "A Jelszónak legalább 6 karakterből kell állnia."
+            fieldsValid = false;
         }
         setSignUpErrors({ ...errors })
         return fieldsValid
